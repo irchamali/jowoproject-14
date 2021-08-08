@@ -20,7 +20,7 @@ class Login extends BaseController
 	// Halaman Login
 	public function index()
 	{
-		$data ['title']   = "App-PMB | Login";
+		$data ['title']   = "Satgas Covid-19 | Login";
 		return view('v_login/index', $data);
 	}
 

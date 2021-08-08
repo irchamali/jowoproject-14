@@ -75,20 +75,38 @@
     <script src="<?= base_url(''); ?>/assets/selecao/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="<?= base_url(''); ?>/assets/selecao/vendor/php-email-form/validate.js"></script>
     <script src="<?= base_url(''); ?>/assets/selecao/vendor/swiper/swiper-bundle.min.js"></script>
+
     <!-- Template Main JS File -->
     <script src="<?= base_url(''); ?>/assets/selecao/js/main.js"></script>
 
+    <!-- bs-custom-file-input -->
+    <!-- <script src="/assets/adminlte3/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script> -->
+    <!-- InputMask -->
+    <!-- <script src="/assets/adminlte3/plugins/moment/moment.min.js"></script>
+    <script src="/assets/adminlte3/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script> -->
+    <!-- date-range-picker -->
+    <!-- <script src="/assets/adminlte3/plugins/daterangepicker/daterangepicker.js"></script> -->
+    <!-- Tempusdominus Bootstrap 4 -->
+    <!-- <script src="/assets/adminlte3/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
+    <!-- Template Main JS File -->
+    <!-- <script src="/assets/bizland/js/main.js"></script> -->
+    <!-- jQuery -->
     <script src="/assets/adminlte3/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="/assets/adminlte3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Toastr -->
+    <!-- <script src="/assets/adminlte3/plugins/toastr/toastr.min.js"></script> -->
+    <!-- DataTables -->
     <script src="/assets/adminlte3/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="/assets/adminlte3/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="/assets/adminlte3/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="/assets/adminlte3/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
     <!-- overlayScrollbars -->
     <script src="/assets/adminlte3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <!-- <script src="/assets/adminlte3/dist/js/adminlte.min.js"></script> -->
     <!-- AdminLTE for demo purposes -->
-    <script src="/assets/adminlte3/dist/js/demo.js"></script>
+    <!-- <script src="/assets/adminlte3/dist/js/demo.js"></script> -->
     <script>
         $(function () {
             $("#example1").DataTable();
@@ -103,20 +121,7 @@
         });
     </script>
 
-    <script>
-        var mymap = L.map('mapid').setView([-1.4592149539219135, 120.44959250038355], 4);
-        L.tileLayer(
-            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                id: 'mapbox/streets-v11',
-            }).addTo(mymap);
-            <?php foreach ($petaprov['features'] as $key => $value) { ?>
-                L.marker([<?= $value['geometry']['y'] ?>, <?= $value['geometry']['x'] ?>]).addTo(mymap)
-                .bindPopup("<b>Provinsi: <?= $value['attributes']['Provinsi'] ?></b><br>"+"Positif: <?= $value['attributes']['Kasus_Posi'] ?><br>"
-                +"Sembuh: <?= $value['attributes']['Kasus_Semb'] ?><br>"+"Meninggal: <?= $value['attributes']['Kasus_Meni'] ?><br>").openPopup();
-            <?php } ?>
-    </script>
+    
 
 </body>
 
