@@ -3,7 +3,7 @@
 <?= $this->section('header') ?>
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
-    <h1 class="logo mr-auto"><a href="<?php echo base_url('/'); ?>">Bang Ambo<span>University</span></a></h1>
+    <h1 class="logo mr-auto"><a href="<?php echo base_url('/'); ?>">SatgasCovid</span></a></h1>
   </div>
 </header>
 <?= $this->endSection() ?>

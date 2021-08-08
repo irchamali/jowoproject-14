@@ -3,7 +3,7 @@
 <?= $this->section('header') ?>
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
-    <h1 class="logo mr-auto"><a href="<?php echo base_url('/'); ?>">Bang Ambo<span>University</span></a></h1>
+    <h1 class="logo mr-auto"><a href="<?php echo base_url('/'); ?>">SatgasCovid</span></a></h1>
   </div>
 </header>
 <?= $this->endSection() ?>
@@ -32,7 +32,7 @@
 
       <div class="section-title">
         <h3><span>Halaman Login</span></h3>
-        <p>Aplikasi Pendaftaran Mahasiswa Baru - Bang Ambo University</p>
+        <p>Silahkan Mendaftar</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">

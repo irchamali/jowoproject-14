@@ -9,14 +9,16 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="#">Home</a></li>
+                <li><a class="nav-link scrollto" href="<?= base_url(''); ?>">Home</a></li>
                 <li><a class="nav-link scrollto" href="<?= base_url(''); ?>#foz">Data FOZ</a></li>
-                <li><a class="nav-link scrollto" href="<?= base_url(''); ?>#nation">Data Nasional</a></li>
+                <li><a class="nav-link scrollto" href="<?= base_url('indonesia'); ?>">Data Nasional</a></li>
                 <li><a class="nav-link scrollto" href="<?= base_url('dunia'); ?>">Data Global</a></li>
-                <li class="dropdown"><a href="#"><span>Data Nasional</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><span>Analisis Spasial</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Data Tabulasi</a></li>
-                        <li><a href="#">Pemetaan</a></li>
+                        <!-- <li><a href="#">Statistik Harian</a></li> -->
+                        <li><a href="#">RS Rujukan</a></li>
+                        <li><a href="#">Laboratorium</a></li>
+                        <li><a href="#">Kecamatan Rawan</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#">Login</a></li>

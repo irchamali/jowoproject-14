@@ -29,28 +29,7 @@
     <link href="<?= base_url(''); ?>/assets/selecao/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="<?= base_url(''); ?>/assets/selecao/css/style.css" rel="stylesheet">
-    <!-- LeafletJS -->
-    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-    <!-- Font Awesome -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" >
-    <!-- daterange picker -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" >
-    <!-- SweetAlert2 -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" rel="stylesheet" >
-    <!-- Toastr -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/toastr/toastr.min.css" rel="stylesheet" >
-    <!-- DataTables -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" >
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" >
-    <!-- Tempusdominus Bbootstrap 4 -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" >
-    <!-- overlayScrollbars -->
-    <link href="<?= base_url(''); ?>/assets/adminlte3/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" >
-    <!-- Theme style -->
-    <!-- <link href="<?= base_url(''); ?>/assets/adminlte3/dist/css/adminlte.min.css" rel="stylesheet" > -->
-
+    
 </head>
 
 <body>
@@ -77,46 +56,6 @@
     <script src="<?= base_url(''); ?>/assets/selecao/vendor/swiper/swiper-bundle.min.js"></script>
     <!-- Template Main JS File -->
     <script src="<?= base_url(''); ?>/assets/selecao/js/main.js"></script>
-
-    <script src="/assets/adminlte3/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="/assets/adminlte3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/adminlte3/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/assets/adminlte3/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/assets/adminlte3/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="/assets/adminlte3/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="/assets/adminlte3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="/assets/adminlte3/dist/js/demo.js"></script>
-    <script>
-        $(function () {
-            $("#example1").DataTable();
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-            });
-        });
-    </script>
-
-    <script>
-        var mymap = L.map('mapid').setView([-1.4592149539219135, 120.44959250038355], 4);
-        L.tileLayer(
-            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                id: 'mapbox/streets-v11',
-            }).addTo(mymap);
-            <?php foreach ($petaprov['features'] as $key => $value) { ?>
-                L.marker([<?= $value['geometry']['y'] ?>, <?= $value['geometry']['x'] ?>]).addTo(mymap)
-                .bindPopup("<b>Provinsi: <?= $value['attributes']['Provinsi'] ?></b><br>"+"Positif: <?= $value['attributes']['Kasus_Posi'] ?><br>"
-                +"Sembuh: <?= $value['attributes']['Kasus_Semb'] ?><br>"+"Meninggal: <?= $value['attributes']['Kasus_Meni'] ?><br>").openPopup();
-            <?php } ?>
-    </script>
 
 </body>
 

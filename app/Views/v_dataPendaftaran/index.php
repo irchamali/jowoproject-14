@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12">
-            <h1>Data Pendaftaran Mahasiswa Baru</h1>
+            <h1>Data Pendaftaran</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -24,7 +24,7 @@
             <!-- Default box -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Tabel Data Pendaftaran Mahasiswa Baru</h3>
+                <h3 class="card-title">Tabel Data Pendaftaran</h3>
               </div>
               <div class="card-body table-responsive">
                 <table id="example1" class="table table-bordered table-striped">

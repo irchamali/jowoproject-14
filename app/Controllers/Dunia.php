@@ -23,7 +23,7 @@ class Dunia extends BaseController
 		$meninggal =json_decode(file_get_contents('https://api.kawalcorona.com/meninggal'),true);
 		$global =json_decode(file_get_contents('https://api.kawalcorona.com/'),true);
 		$nasional =json_decode(file_get_contents('https://api.kawalcorona.com/indonesia/'),true);
-		// $petaprov =json_decode(file_get_contents('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json'),true);
+		// $petaglob =json_decode(file_get_contents('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json'),true);
 
 		$data = [
 			'positif' => $positif,
@@ -31,6 +31,7 @@ class Dunia extends BaseController
 			'meninggal' => $meninggal,
 			'global' => $global,
 			'nasional' => $nasional,
+			// 'petaglob' => $petaglob,
 			
 			'title' => 'Satgas Covid-19 | NU Care',
 			'tanggal' => $this->M_informasi->first()

@@ -1,11 +1,11 @@
-<?= $this->extend('layouts_home/template_global') ?>
+<?= $this->extend('layouts_home/template_nasional') ?>
 <!-- ======= Header ======= -->
 
 <?= $this->section('content') ?>
 <main id="main">
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="features">
+    <!-- ======= Features Section ======= -->
+    <section id="nation" class="features">
         <div class="container">
 
             <div class="section-title" data-aos="zoom-out">
@@ -17,26 +17,25 @@
                 <li class="nav-item col-3" data-aos="zoom-in">
                     <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
                         <i class="ri-user-add-line"></i>
-                        <h4 class="d-none d-lg-block">Total Positif<br><?= $positif['value']; ?></h4>
+                        <h4 class="d-none d-lg-block">Total Positif<br><?= $nasional[0]['positif']; ?></h4>
                     </a>
                 </li>
                 <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
                     <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
                         <i class="ri-body-scan-line"></i>
-                        <h4 class="d-none d-lg-block">Total Sembuh<br><?= $sembuh['value']; ?></h4>
+                        <h4 class="d-none d-lg-block">Total Sembuh<br><?= $nasional[0]['sembuh']; ?></h4>
                     </a>
                 </li>
                 <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
                     <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
                         <i class="ri-user-heart-line"></i>
-                        <h4 class="d-none d-lg-block">Total Meninggal<br><?= $meninggal['value']; ?>
-                        </h4>
+                        <h4 class="d-none d-lg-block">Total Meninggal<br><?= $nasional[0]['meninggal']; ?></h4>
                     </a>
                 </li>
                 <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
                     <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
                         <i class="ri-user-follow-line"></i>
-                        <h4 class="d-none d-lg-block">Lihat Data Indonesia</h4>
+                        <h4 class="d-none d-lg-block">Total Dirawat<br><?= $nasional[0]['dirawat']; ?></h4>
                     </a>
                 </li>
             </ul>
@@ -47,27 +46,27 @@
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Data Global</h3>
+                                    <h3 class="card-title">Data Nasional</h3>
                                 </div>
                                 <div class="card-body table-responsive p-0" style="height: 400px;">
                                     <table class="table table-hover table-head-fixed">
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Negara</th>
+                                                <th>Provinsi</th>
                                                 <th>Positif</th>
                                                 <th>Sembuh</th>
                                                 <th>Meninggal</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $no=1; foreach ($global as $key => $value) { ?>
+                                            <?php $no=1; foreach ($provinsi as $key => $value) { ?>
                                             <tr>
                                                 <td><?= $no++; ?></td>
-                                                <td><?= $value['attributes']['Country_Region']; ?></td>
-                                                <td><?= number_format($value['attributes']['Confirmed'],0); ?></td>
-                                                <td><?= number_format($value['attributes']['Recovered'],0); ?></td>
-                                                <td><?= number_format($value['attributes']['Deaths'],0); ?></td>
+                                                <td><?= $value['attributes']['Provinsi']; ?></td>
+                                                <td><?= number_format($value['attributes']['Kasus_Posi'],0); ?></td>
+                                                <td><?= number_format($value['attributes']['Kasus_Semb'],0); ?></td>
+                                                <td><?= number_format($value['attributes']['Kasus_Meni'],0); ?></td>
                                             </tr>
                                             <?php } ?>
                                         </tbody>
@@ -83,17 +82,16 @@
                 <div class="tab-pane" id="tab-2">
                     <div class="row">
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <h3>Data Global</h3>
+                            <h3>Data Nasional</h3>
                             <p>
-                                Data Covid-19 Global berdasarkan 194 Negara yang ada di Dunia
+                                Data Covid-19 Nasional berdasarkan 34 Provinsi yang ada di Indonesia
                             </p>
                             <p class="fst-italic">
-                                REST API Resources by <a href="http://kawalcorona.com">KawalCorona.com</a>
-                                and <a href="https://bnpb-inacovid19.hub.arcgis.com/">InaCOVID-19</a>
+                                REST API Resources by <a href="http://kawalcorona.com">KawalCorona.com</a> and <a
+                                    href="https://bnpb-inacovid19.hub.arcgis.com/">InaCOVID-19</a>
                             </p>
                             <ul>
-                                <li><i class="ri-check-double-line"></i> Update terakhir:
-                                    <?= date('d-m-Y'); ?></li>
+                                <li><i class="ri-check-double-line"></i> Update terakhir: <?= date('d-m-Y'); ?></li>
                             </ul>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -104,17 +102,16 @@
                 <div class="tab-pane" id="tab-3">
                     <div class="row">
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <h3>Data Global</h3>
+                            <h3>Data Nasional</h3>
                             <p>
-                                Data Covid-19 Global berdasarkan 194 Negara yang ada di Dunia
+                                Data Covid-19 Nasional berdasarkan 34 Provinsi yang ada di Indonesia
                             </p>
                             <p class="fst-italic">
-                                REST API Resources by <a href="http://kawalcorona.com">KawalCorona.com</a>
-                                and <a href="https://bnpb-inacovid19.hub.arcgis.com/">InaCOVID-19</a>
+                                REST API Resources by <a href="http://kawalcorona.com">KawalCorona.com</a> and <a
+                                    href="https://bnpb-inacovid19.hub.arcgis.com/">InaCOVID-19</a>
                             </p>
                             <ul>
-                                <li><i class="ri-check-double-line"></i> Update terakhir:
-                                    <?= date('d-m-Y'); ?></li>
+                                <li><i class="ri-check-double-line"></i> Update terakhir: <?= date('d-m-Y'); ?></li>
                             </ul>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -130,21 +127,11 @@
                                 Data Covid-19 Nasional berdasarkan 34 Provinsi yang ada di Indonesia
                             </p>
                             <p class="fst-italic">
-                                REST API Resources by <a href="http://kawalcorona.com">KawalCorona.com</a>
-                                and <a href="https://bnpb-inacovid19.hub.arcgis.com/">InaCOVID-19</a>
-                            </p>
-                            <p>
-                                Update terakhir: <?= date('d-m-Y'); ?>
+                                REST API Resources by <a href="http://kawalcorona.com">KawalCorona.com</a> and <a
+                                    href="https://bnpb-inacovid19.hub.arcgis.com/">InaCOVID-19</a>
                             </p>
                             <ul>
-                                <li><i class="ri-check-double-line"></i> Total Positif:
-                                    <?= $nasional[0]['positif']; ?></li>
-                                <li><i class="ri-check-double-line"></i> Total Sembuh:
-                                    <?= $nasional[0]['sembuh']; ?></li>
-                                <li><i class="ri-check-double-line"></i> Total Meninggal:
-                                    <?= $nasional[0]['meninggal']; ?></li>
-                                <li><i class="ri-check-double-line"></i> Total Dirawat:
-                                    <?= $nasional[0]['dirawat']; ?></li>
+                                <li><i class="ri-check-double-line"></i> Update terakhir: <?= date('d-m-Y'); ?></li>
                             </ul>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -155,8 +142,7 @@
             </div>
 
         </div>
-    </section>
-    <!-- End Services Section -->
+    </section><!-- End Features Section -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -165,8 +151,7 @@
             <div class="row" data-aos="zoom-out">
                 <div class="col-lg-9 text-center text-lg-start">
                     <h3>Call To Action</h3>
-                    <p> Welcome to Satgas Covid-19 Sites by NU Care, let's join for give donation for
-                        patient of
+                    <p> Welcome to Satgas Covid-19 Sites by NU Care, let's join for give donation for patient of
                         Covid-19 in Indonesia with click button below.</p>
                 </div>
                 <div class="col-lg-3 cta-btn-container text-center">

@@ -53,8 +53,8 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">pmb-online@ba-university.ac.id</a>
-        <i class="icofont-phone"></i> (021) 4450668, 4450669
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">office@unusia.ac.id</a>
+        <i class="icofont-phone"></i> (021) 111222
       </div>
       <div class="social-links">
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
