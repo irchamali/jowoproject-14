@@ -8,7 +8,6 @@ use CodeIgniter\Config\AutoloadConfig;
  * -------------------------------------------------------------------
  * AUTO-LOADER
  * -------------------------------------------------------------------
- *
  * This file defines the namespaces and class maps so the Autoloader
  * can find the files as needed.
  *
@@ -17,6 +16,7 @@ use CodeIgniter\Config\AutoloadConfig;
  */
 class Autoload extends AutoloadConfig
 {
+
 	/**
 	 * -------------------------------------------------------------------
 	 * Namespaces
@@ -37,13 +37,12 @@ class Autoload extends AutoloadConfig
 	 *       'App'	       => APPPATH
 	 *   ];
 	 *
-	 * @var array<string, string>
+	 * @var array
 	 */
 	public $psr4 = [
+		APP_NAMESPACE => APPPATH, // For custom app namespace
 		'Config'      => APPPATH . 'Config',
-        APP_NAMESPACE => APPPATH,
-        'App'         => APPPATH,
-        'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
+		'Dompdf'      => APPPATH . 'ThirdParty/dompdf/src',
 	];
 
 	/**
@@ -62,7 +61,7 @@ class Autoload extends AutoloadConfig
 	 *       'MyClass'   => '/path/to/class/file.php'
 	 *   ];
 	 *
-	 * @var array<string, string>
+	 * @var array
 	 */
 	public $classmap = [];
 }
